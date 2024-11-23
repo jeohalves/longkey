@@ -1,0 +1,19 @@
+# @package _global_
+mixed: bf16
+model:
+  pretrain_model: google-bert/bert-base-uncased
+  max_phrase_words: 5
+  max_train_epochs: 40
+  val_epochs_to_skip: 1
+  global_attention: false
+  gradient_accumulation_steps: 16
+  train:
+    max_token: 8192
+    max_chunk_token: 510
+    max_steps_per_epoch: 10000
+    batch_size: 1
+    num_workers: 16
+  inference:
+    max_token: null
+    batch_size: 1
+    num_workers: 16

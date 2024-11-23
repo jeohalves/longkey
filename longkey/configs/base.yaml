@@ -1,0 +1,64 @@
+defaults:
+  - _self_
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+save_checkpoint: true
+load_checkpoint: null
+save_folder: null
+mixed: null # null, fp16 or bf16
+distributed: false
+world_size: 1
+rank: 0
+dist_url: tcp://127.0.0.1:23456
+dist_backend: null
+seed: null
+device: 0
+exp:
+  name: null
+dir:
+  data: ???
+  exp: ???
+data:
+  dataset: ??
+model:
+  method: ???
+  pretrain_model: ???
+  max_phrase_words: ???
+  max_train_epochs: ???
+  val_epochs_to_skip: ???
+  global_attention: ???
+  gradient_accumulation_steps: ???
+  hidden_dropout_prob: 0.0
+  train:
+    max_token: ???
+    max_chunk_token: -1
+    max_steps_per_epoch: ???
+    batch_size: ???
+    num_workers: ???
+  inference:
+    max_token: null
+    max_chunk_token: -1
+    batch_size: ???
+    num_workers: ???
+optim:
+  learning_rate: 5e-5
+  weight_decay: 0.01
+  warmup_proportion: 0.1
+evaluate:
+  tag_pooling: min
+  stem: true
+  eval_stem: true
+log:
+  display_iter: 100
+  use_viso: true
+runtime:
+  cuda: true
+  use_checkpoint: false
+  pin_memory: true
+  benchmark: false
+  ddp: false
