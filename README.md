@@ -1,6 +1,6 @@
 # LongKey
 
-This repository contains the code for the paper "LongKey: Keyphrase Extraction for Long Documents". The paper is available [here](). Below are the instructions to use the code.
+This repository contains the code for the paper "LongKey: Keyphrase Extraction for Long Documents". The paper is available [here](https://arxiv.org/abs/2411.17863). Below are the instructions to use the code.
 
 ## Roadmap
 
@@ -120,4 +120,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use this code, please cite our paper:
 
 ```
+@misc{alves2024longkey,
+    title={LongKey: Keyphrase Extraction for Long Documents},
+    author={Jeovane Honorio Alves and Radu State and Cinthia Obladen de Almendra Freitas and Jean Paul Barddal},
+    year={2024},
+    eprint={2411.17863},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
 ```
